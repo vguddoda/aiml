@@ -1,0 +1,35 @@
+
+================================================================================
+🤖 INTERACTIVE AI AGENT - Learning Edition
+================================================================================
+
+📡 Initializing agent components...
+
+✅ Connected to GitHub Models (GPT-4o-mini)
+
+✅ Loaded 3 tools: web_search, calculator, time
+
+✅ Agent initialized and ready!
+
+================================================================================
+💡 HOW THIS WORKS:
+================================================================================
+
+When you ask a question, the agent will:
+1. Read your question
+2. Decide if it needs to use any tools
+3. Use the best tool(s) available
+4. Think about the results
+5. Give you an answer
+
+You'll see all the thinking steps because verbose=True!
+
+================================================================================
+
+Commands:
+  - Type any question to ask the agent
+  - Type 'exit' or 'quit' to stop
+  - Type 'examples' to see example questions
+
+
+👤 You: 
