@@ -109,28 +109,7 @@ Question → LLM Thinks → Selects Tools → Executes → Answers
 | `calculator` | Do math | "100 * 50" |
 | `time` | Get current time | "What time is it?" |
 
-## 📖 Learning Path
 
-### Beginner (30 minutes)
-- [ ] Read QUICKSTART.md
-- [ ] Run `python3 interactive_agent.py`
-- [ ] Ask different types of questions
-- [ ] Observe verbose output
-
-### Intermediate (1 hour)
-- [ ] Read CONCEPTS.md
-- [ ] Understand the agent loop
-- [ ] Modify the system prompt
-- [ ] Change test questions
-
-### Advanced (2+ hours)
-- [ ] Read AI_AGENT_GUIDE.md
-- [ ] Add new tools (weather, database, etc.)
-- [ ] Create interactive features
-- [ ] Handle edge cases
-- [ ] Add conversation memory
-
-## 🔧 Adding Your Own Tools
 
 ### Example: Add a Temperature Converter
 
@@ -332,3 +311,18 @@ Ask your first question! 🚀
 
 **Happy Learning!** 
 For questions, refer to the documentation files or try simpler prompts first.
+
+
+######### Simple steps #############
+
+update .env with your token
+run docker-componse up
+then test curl
+
+curl -X POST http://localhost:5000/ask \
+     -H "Content-Type: application/json" \
+     -d '{"question": "Calculate 100 * 50"}'
+
+Response :
+
+{"answer":"The result of 100 * 50 is 5000.","question":"Calculate 100 * 50","status":"success","timestamp":"2026-03-03T17:00:05.625023"}
