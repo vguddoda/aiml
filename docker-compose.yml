@@ -1,0 +1,26 @@
+# Docker Compose Configuration
+
+services:
+  ai-agent:
+    build: .
+    container_name: ai-agent-app
+    ports:
+      - "5000:5000"
+    env_file: /Users/vishalkumarbg/Documents/AI_ML_DOCS/aiml/.env
+    environment:
+      - FLASK_ENV=production
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - ai-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  ai-network:
+    driver: bridge
